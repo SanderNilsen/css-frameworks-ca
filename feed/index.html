@@ -4,9 +4,130 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Feed</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="../dist/css/index.css" />
   </head>
   <body>
+    <nav class="bg-white p-4 sticky-top">
+      <h1 class="text-center text-primary">FEED</h1>
+      <div class="container mt-4">
+        <div class="row">
+          <div class="col-sm mb-3">
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
+          </div>
 
+          <div class="col-sm">
+            <select class="form-select" id="sort">
+              <option selected>Newest</option>
+              <option>Oldest</option>
+              <option>Most Popular</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-4">
+      <div class="mt-5 bg-white p-3">
+        <h4>Create a new Post</h4>
+        <form>
+          <div class="mb-3">
+            <label for="postTitle" class="form-label">Title</label>
+            <input
+              type="text"
+              class="form-control"
+              id="postTitle"
+              required
+              placeholder="Post title"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="postContent" class="form-label">Description</label>
+            <textarea
+              class="form-control"
+              placeholder="Write something..."
+              id="postContent"
+              rows="3"
+              required
+            ></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="postImage" class="form-label">Upload Image</label>
+            <input
+              class="form-control"
+              type="file"
+              id="postImage"
+              accept="image/*"
+              required
+            />
+          </div>
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary">Create post</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="bg-white p-3 mt-4">
+        <div
+          class="d-flex justify-content-between align-items-center mb-4 mt-4"
+        >
+          <h3>Posts</h3>
+        </div>
+        <div class="row g-4">
+          <div class="col-md">
+            <div class="card">
+              <img
+                src="../images/skyscrapers-unsplash.jpg"
+                class="card-img-top"
+                alt="Post Thumbnail"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Post Title</h5>
+                <p class="card-text">Description...</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card">
+              <img
+                src="../images/skyscrapers-unsplash.jpg"
+                class="card-img-top"
+                alt="Post Thumbnail"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Post Title</h5>
+                <p class="card-text">Description...</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card">
+              <img
+                src="../images/skyscrapers-unsplash.jpg"
+                class="card-img-top"
+                alt="Post Thumbnail"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Post Title</h5>
+                <p class="card-text">Description...</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
