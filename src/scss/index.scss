@@ -14,3 +14,18 @@ button {
   border-radius: 50px;
 }
 
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .stats, .profile-name {
+    text-align: center;
+  
+    .stat-number {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
