@@ -19,7 +19,7 @@
     "SCSS",
     "SASS"
   ],
-  "author": "Oliver Dipple <oliver.dipple@noroff.no>",
+  "author": "Sander Nilsen",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/NoroffFEU/css-frameworks-ca/issues"
@@ -27,7 +27,8 @@
   "homepage": "https://github.com/NoroffFEU/css-frameworks-ca#readme",
   "dependencies": {
     "bootstrap": "^5.2.0",
-    "live-server": "^1.2.2",
+    "bootstrap-icons": "^1.11.3",
+    "live-server": "^1.2.0",
     "sass": "^1.78.0"
   }
 }
