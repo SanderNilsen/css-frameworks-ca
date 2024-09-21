@@ -1,5 +1,7 @@
 # LinkUp - CSS Frameworks CA
 
+<img src="images/LinkUp-CSS Frameworks-CA .png">
+
 A simple social media application built using HTML, SASS, Bootstrap, and NPM. The application features user authentication, a feed page, and a profile page, along with responsive design and SCSS customizations.
 
 ## Features
@@ -48,10 +50,14 @@ To get a local copy up and running, follow these steps:
     
     You can use `live-server` to view the application in the browser.
 
-## Contact
-
-[My LinkedIn page](https://www.linkedin.com/in/sandernilsen/)
-
 ## Live Website
 
 [LinkUp](https://linkup-css-frameworks.netlify.app/)
+
+## Figma 
+
+[Figma Design](https://www.figma.com/design/oyh4CwIHARXTBwqrZACbGb/LinkUp-CA?node-id=0-1&t=oCAEkQeGU3XTt8Tu-1)
+
+## Contact
+
+[My LinkedIn page](https://www.linkedin.com/in/sandernilsen/)
