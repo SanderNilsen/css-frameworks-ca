@@ -1,8 +1,21 @@
+@import "variables";
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 
 body {
-background-color: #F7F8FC;
+  background-color: #F7F8FC;
+}
+
+.bi-box-arrow-right {
+  color: map-get($colors, icon);
+
+    &:hover {
+      color: map-get($colors, danger);        
+    }
+}
+
+button {
+  border-radius: 50px;
 }
 
 .card {
@@ -11,27 +24,28 @@ background-color: #F7F8FC;
   max-width: 400px;
 }
 
-button {
-  border-radius: 50px;
+.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
-.profile-img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-  }
+.logo-footer {
+  width: 50px;
+  height: 50px;
+}
   
- .profile-img-feed {
-    width: 50px;
-    height: 50px;
-  }
+.profile-img-feed {
+  width: 50px;
+  height: 50px;
+}
 
-  .stats, .profile-name {
-    text-align: center;
+.stats, .profile-name {
+  text-align: center;
   
     .stat-number {
-      font-size: 1.5rem;
+      font-size: 24px;
       font-weight: bold;
     }
-  }
+}

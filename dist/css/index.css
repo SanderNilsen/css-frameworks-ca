@@ -7,20 +7,8 @@
  */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 :root {
-  --bs-blue: #0d6efd;
-  --bs-indigo: #6610f2;
-  --bs-purple: #6f42c1;
-  --bs-pink: #d63384;
-  --bs-red: #dc3545;
-  --bs-orange: #fd7e14;
-  --bs-yellow: #ffc107;
-  --bs-green: #198754;
-  --bs-teal: #20c997;
-  --bs-cyan: #0dcaf0;
-  --bs-black: #000;
-  --bs-white: #fff;
-  --bs-gray: #6c757d;
-  --bs-gray-dark: #343a40;
+  --bs-icon: #000000;
+  --bs-danger: #ff0000;
   --bs-gray-100: #f8f9fa;
   --bs-gray-200: #e9ecef;
   --bs-gray-300: #dee2e6;
@@ -10713,14 +10701,21 @@ body {
   background-color: #F7F8FC;
 }
 
-.card {
-  border-radius: 2px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
+.bi-box-arrow-right {
+  color: #000000;
+}
+.bi-box-arrow-right:hover {
+  color: #ff0000;
 }
 
 button {
   border-radius: 50px;
+}
+
+.card {
+  border-radius: 2px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
 }
 
 .profile-img {
@@ -10728,6 +10723,11 @@ button {
   height: 150px;
   object-fit: cover;
   border-radius: 50%;
+}
+
+.logo-footer {
+  width: 50px;
+  height: 50px;
 }
 
 .profile-img-feed {
@@ -10739,7 +10739,7 @@ button {
   text-align: center;
 }
 .stats .stat-number, .profile-name .stat-number {
-  font-size: 1.5rem;
+  font-size: 24px;
   font-weight: bold;
 }
 
