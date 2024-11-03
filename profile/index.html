@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Profile Page for LinkUp, a social media application for everyone."
+    />
+    <title>Profile | LinkUp</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="../dist/css/index.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar container mt-5">
+        <a href="../feed/" class="nav-link">
+          <h2>
+            <i class="bi bi-house-door-fill p-4"></i>
+          </h2>
+        </a>
+        <a href="/" class="nav-link">
+          <h2>
+            <i class="bi bi-box-arrow-right p-4"></i>
+          </h2>
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="container">
+        <div class="text-center">
+          <img src="/images/profile-img.png" alt="Profile" class="profile-img" />
+        </div>
+
+        <h1 class="mt-4 profile-name">Sander Nilsen</h1>
+
+        <section class="mt-4 stats">
+          <div class="row">
+            <div class="col">
+              <div class="stat-number">200</div>
+              <div>Posts</div>
+            </div>
+            <div class="col">
+              <div class="stat-number">100</div>
+              <div>Followers</div>
+            </div>
+            <div class="col">
+              <div class="stat-number">300</div>
+              <div>Following</div>
+            </div>
+          </div>
+        </section>
+
+        <div class="text-center mt-4">
+          <button class="btn btn-primary w-25 mb-4">Follow</button>
+        </div>
+
+        <section class="container mt-4 bg-white">
+          <div class="row g-4 p-2 pb-4">
+            <div class="col-6 mb-3">
+              <form>
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+              </form>
+            </div>
+
+            <div class="col-6">
+              <select class="form-select" id="sort">
+                <option selected>Newest</option>
+                <option>Oldest</option>
+                <option>Most Popular</option>
+              </select>
+            </div>
+
+            <section>
+              <h2>Sanders posts</h2>
+              <div class="row g-2">
+                <div class="col-sm card-center">
+                  <div class="card">
+                    <img
+                      src="../images/skyscrapers-unsplash.jpg"
+                      class="card-img-top"
+                      alt="Post Thumbnail"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Title</h5>
+                      <a href="#" class="btn btn-sm btn-primary">Show More</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm card-center">
+                  <div class="card">
+                    <img
+                      src="../images/skyscrapers-2-unsplash.png"
+                      class="card-img-top"
+                      alt="Post Thumbnail"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Title</h5>
+                      <a href="#" class="btn btn-sm btn-primary">Show More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-2 g-2">
+                <div class="col-sm card-center">
+                  <div class="card">
+                    <img
+                      src="../images/skyscrapers-3-unsplash.png"
+                      class="card-img-top"
+                      alt="Post Thumbnail"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Title</h5>
+                      <a href="#" class="btn btn-sm btn-primary">Show More</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm card-center">
+                  <div class="card">
+                    <img
+                      src="../images/skyscrapers-4-unsplash.png"
+                      class="card-img-top"
+                      alt="Post Thumbnail"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Title</h5>
+                      <a href="#" class="btn btn-sm btn-primary">Show More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer class="bg-primary text-center text-white mt-5">
+      <img class="logo-footer" src="/images/logo-footer.png" alt="Footer logo" />
+      <div class="text-center pb-4">
+        © 2024 Copyright:
+        <a class="text-white" href="https://sandernilsen.github.io/">Sander Nilsen</a>
+      </div>
+    </footer>
+  </body>
+</html>
