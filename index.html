@@ -19,59 +19,52 @@
     <main>
       <div class="container vh-100 d-flex align-items-center justify-content-center">
         <div class="card p-5">
-          <img src="images/linkup-logo.png" alt="linkup-logo"/>
- <form id="auth-form">
-  <div class="mb-3">
-    <label for="name" class="form-label">Name</label>
-    <input
-      type="text"
-      placeholder="Full Name"
-      class="form-control"
-      id="name"
-      name="name"
-    />
-  </div>
-  <div class="mb-3">
-    <label for="email" class="form-label">Email</label>
-    <input
-      type="email"
-      placeholder="Email"
-      class="form-control"
-      id="email"
-      name="email"
-      required
-    />
-  </div>
-  <div class="mb-3">
-    <label for="password" class="form-label">Password</label>
-    <input
-      type="password"
-      placeholder="Password"
-      class="form-control"
-      id="password"
-      name="password"
-      minlength="8"
-      required
-    />
-  </div>
-  <button
-    type="submit"
-    class="btn btn-primary w-100"
-    data-auth="login"
-  >
-    Log in
-  </button>
-  <p class="text-center mt-3">
-    <a href="#" class="text-decoration-none">Forgotten password?</a>
-  </p>
-  <button
-    type="submit"
-    class="btn btn-success w-100"
-    data-auth="register"
-  >
-    Create new account
-  </button>
-</form>
+          <img src="images/linkup-logo.png" alt="linkup-logo" />
+          <form id="auth-form">
+            <div id="error-message" class="text-danger mb-3" style="display: none"></div>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input
+                type="text"
+                placeholder="Full Name"
+                class="form-control"
+                id="name"
+                name="name"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                placeholder="Email"
+                class="form-control"
+                id="email"
+                name="email"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input
+                type="password"
+                placeholder="Password"
+                class="form-control"
+                id="password"
+                name="password"
+                minlength="8"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary w-100" data-auth="login">
+              Log in
+            </button>
+            <p class="text-center mt-3">
+              <a href="#" class="text-decoration-none">Forgotten password?</a>
+            </p>
+            <button type="submit" class="btn btn-success w-100" data-auth="register">
+              Create new account
+            </button>
+          </form>
         </div>
       </div>
     </main>
