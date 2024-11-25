@@ -1,6 +1,6 @@
-import { login } from "../../api/auth/login.js";
-import { register } from "../../api/auth/register.js";
-import { getPosts } from "../../api/posts/get.js";
+import { login } from "../../api/auth/login.mjs";
+import { register } from "../../api/auth/register.mjs";
+import { getPosts } from "../../api/posts/get.mjs";
 
 export async function onAuth(event) {
     event.preventDefault();
