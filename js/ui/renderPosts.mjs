@@ -10,12 +10,12 @@ export function renderPosts(posts) {
   }
 
   postsContainer.innerHTML = posts
-    .map(
-      (post) => `
-      <div class="card mb-3" data-post-id="${post.id}">
+  .map(
+    ({ id, title, body }) => `
+      <div class="card mb-3" data-post-id="${id}">
         <div class="card-body">
-          <h5 class="card-title">${post.title}</h5>
-          <p class="card-text">${post.body}</p>
+          <h5 class="card-title">${title}</h5>
+          <p class="card-text">${body}</p>
           <div>
             <button class="btn btn-sm btn-primary">
               <i class="bi bi-hand-thumbs-up-fill"></i> Like
@@ -34,8 +34,8 @@ export function renderPosts(posts) {
         </div>
       </div>
     `
-    )
-    .join("");
+  )
+  .join("");
 
   // Event listeners for edit and delete buttons
   postsContainer.querySelectorAll(".edit-post").forEach((button) =>
