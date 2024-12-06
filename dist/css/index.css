@@ -10727,6 +10727,10 @@ button {
   max-width: 400px;
 }
 
+#posts-container {
+  gap: 10px;
+}
+
 .profile-img {
   width: 150px;
   height: 150px;
