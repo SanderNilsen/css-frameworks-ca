@@ -13,7 +13,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="../dist/css/index.css" />
-    <script type="module" src="/js/index.mjs" defer></script>
+    <script type="module" src="/js/profile.mjs" defer></script>
   </head>
   <body>
     <header>
@@ -37,20 +37,20 @@
           <img src="/images/profile-img.png" alt="Profile" class="profile-img" />
         </div>
 
-        <h1 class="mt-4 profile-name">Sander Nilsen</h1>
+        <h1 class="mt-4 profile-name">User</h1>
 
         <section class="mt-4 stats">
           <div class="row">
             <div class="col">
-              <div class="stat-number">200</div>
+              <div class="stat-number" id="posts-count">0</div>
               <div>Posts</div>
             </div>
             <div class="col">
-              <div class="stat-number">100</div>
+              <div class="stat-number" id="followers-count">100</div>
               <div>Followers</div>
             </div>
             <div class="col">
-              <div class="stat-number">300</div>
+              <div class="stat-number" id="following-count">300</div>
               <div>Following</div>
             </div>
           </div>
@@ -65,82 +65,26 @@
             <div class="col-6 mb-3">
               <form>
                 <input
-                  class="form-control me-2"
+                  id="search-input"
+                  class="form-control"
                   type="search"
-                  placeholder="Search"
+                  placeholder="Search User's posts"
                   aria-label="Search"
                 />
               </form>
             </div>
 
             <div class="col-6">
-              <select class="form-select" id="sort">
-                <option selected>Newest</option>
-                <option>Oldest</option>
-                <option>Most Popular</option>
+              <select class="form-select" id="sort-select">
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
               </select>
             </div>
-
-            <section>
-              <h2>Sanders posts</h2>
-              <div class="row g-2">
-                <div class="col-sm card-center">
-                  <div class="card">
-                    <img
-                      src="../images/skyscrapers-unsplash.jpg"
-                      class="card-img-top"
-                      alt="Post Thumbnail"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Title</h5>
-                      <a href="#" class="btn btn-sm btn-primary">Show More</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm card-center">
-                  <div class="card">
-                    <img
-                      src="../images/skyscrapers-2-unsplash.png"
-                      class="card-img-top"
-                      alt="Post Thumbnail"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Title</h5>
-                      <a href="#" class="btn btn-sm btn-primary">Show More</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row mt-2 g-2">
-                <div class="col-sm card-center">
-                  <div class="card">
-                    <img
-                      src="../images/skyscrapers-3-unsplash.png"
-                      class="card-img-top"
-                      alt="Post Thumbnail"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Title</h5>
-                      <a href="#" class="btn btn-sm btn-primary">Show More</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm card-center">
-                  <div class="card">
-                    <img
-                      src="../images/skyscrapers-4-unsplash.png"
-                      class="card-img-top"
-                      alt="Post Thumbnail"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Title</h5>
-                      <a href="#" class="btn btn-sm btn-primary">Show More</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
           </div>
+          <section>
+            <h2>User's posts</h2>
+            <div id="profile-posts" class="row g-2"></div>
+          </section>
         </section>
       </section>
     </main>
