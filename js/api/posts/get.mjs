@@ -3,7 +3,7 @@ import { authFetch } from "../fetch.mjs";
 
 export async function getPosts() {
   try {
-    const response = await authFetch(API_BASE + API_POSTS);
+    const response = await authFetch(`${API_BASE}${API_POSTS}?_author=true`);
 
     if (!response.ok) {
       throw new Error("Failed to get posts");

@@ -10,32 +10,30 @@ export function renderPosts(posts) {
   }
 
   postsContainer.innerHTML = posts
-  .map(
-    ({ id, title, body }) => `
+    .map(
+      ({ id, title, body, created, updated, author }) => `
       <div class="card mb-3" data-post-id="${id}">
+        <div class="card-header">
+          <span class="fw-bold">${author?.name || "Undefined"}</span>
+          <small class="text-muted ms-2">${new Date(created).toLocaleString()}</small>
+        </div>
         <div class="card-body">
           <h5 class="card-title">${title}</h5>
           <p class="card-text">${body}</p>
-          <div>
-            <button class="btn btn-sm btn-primary">
-              <i class="bi bi-hand-thumbs-up-fill"></i> Like
-            </button>
-            <button class="btn btn-sm btn-secondary">
-              <i class="bi bi-chat-left-fill"></i> Comment
-            </button>
-            <button class="btn btn-sm btn-success">
-              <i class="bi bi-share-fill"></i> Share
-            </button> 
-            <button class="btn btn-warning btn-sm edit-post">Edit
-            </button>
-            <button class="btn btn-danger btn-sm delete-post">Delete
-            </button>
+          <div class="">
+              <button class="btn btn-sm btn-primary"><i class="bi bi-hand-thumbs-up-fill"></i> Like</button>
+              <button class="btn btn-sm btn-secondary"><i class="bi bi-chat-left-fill"></i> Comment</button>
+              <button class="btn btn-warning btn-sm edit-post">Edit</button>
+              <button class="btn btn-danger btn-sm delete-post">Delete</button>
           </div>
         </div>
+        <small class="card-footer text-muted">
+          Last updated: ${new Date(updated).toLocaleString()}
+        </small>
       </div>
     `
-  )
-  .join("");
+    )
+    .join("");
 
   // Event listeners for edit and delete buttons
   postsContainer.querySelectorAll(".edit-post").forEach((button) =>
