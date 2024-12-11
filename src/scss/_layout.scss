@@ -9,6 +9,13 @@
         color: map-get($colors, danger);        
       }
   }
+
+  #loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }  
   
   body {
     background-color: #F7F8FC;

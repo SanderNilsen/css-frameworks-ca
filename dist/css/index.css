@@ -10709,6 +10709,13 @@ textarea.form-control-lg {
   color: #ff0000;
 }
 
+#loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
 body {
   background-color: #F7F8FC;
 }

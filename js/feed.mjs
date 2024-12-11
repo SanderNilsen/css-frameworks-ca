@@ -6,14 +6,23 @@ document.addEventListener("DOMContentLoaded", async () => {
   const postsContainer = document.getElementById("posts-container");
   const createPostForm = document.getElementById("create-post-form");
   const searchInput = document.getElementById("search-input");
+  const loader = document.getElementById("loader");
 
   let allPosts = [];
 
+  // Function to toggle loader visibility
+  const toggleLoader = (isVisible) => {
+    loader.style.display = isVisible ? "block" : "none";
+  };
+
   // Get and render posts on feed-page
   try {
+    toggleLoader(true); // Show loader
     allPosts = await getPosts(); 
+    toggleLoader(false); // Hide loader
     renderPosts(allPosts, postsContainer); 
   } catch (error) {
+    toggleLoader(false); // Hide loader (in case of an error)
     console.error("Error fetching posts:", error);
     postsContainer.innerHTML = `<p class="text-danger">Failed to load posts. Please try again later.</p>`;
   }
@@ -26,11 +35,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     const content = document.getElementById("postContent").value;
 
     try {
+      toggleLoader(true); // Show loader
       await createPost(title, content);
       allPosts = await getPosts(); 
+      toggleLoader(false); // Hide loader
       renderPosts(allPosts, postsContainer);
       createPostForm.reset();
     } catch (error) {
+      toggleLoader(false); // Hide loader (in case of an error)
       console.error("Error creating post:", error);
       alert("Failed to create post. Please try again.");
     }
