@@ -50,9 +50,9 @@ To get a local copy up and running, follow these steps:
     
     You can use `live-server` to view the application in the browser.
 
-## Live Website
+## Trello
 
-[LinkUp](https://linkup-css-frameworks.netlify.app/)
+[Trello](https://trello.com/invite/b/66f7f720d27c5a668e0c08ca/ATTIdf166f721336e2195949f9a03674a0a5778615B8/javascript-2)
 
 ## Figma 
 

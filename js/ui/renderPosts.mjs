@@ -16,6 +16,8 @@ export function renderPosts(posts) {
         <div class="card-header">
           <span class="fw-bold">${author?.name || "Undefined"}</span>
           <small class="text-muted ms-2">${new Date(created).toLocaleString()}</small>
+          <button class="btn btn-warning btn-sm edit-post"><i class="bi bi-pencil-square"></i></button>
+          <button class="btn btn-danger btn-sm delete-post"><i class="bi bi-trash-fill"></i></button>
         </div>
         <div class="card-body">
           <h5 class="card-title">${title}</h5>
@@ -23,8 +25,6 @@ export function renderPosts(posts) {
           <div class="">
               <button class="btn btn-sm btn-primary"><i class="bi bi-hand-thumbs-up-fill"></i> Like</button>
               <button class="btn btn-sm btn-secondary"><i class="bi bi-chat-left-fill"></i> Comment</button>
-              <button class="btn btn-warning btn-sm edit-post">Edit</button>
-              <button class="btn btn-danger btn-sm delete-post">Delete</button>
           </div>
         </div>
         <small class="card-footer text-muted">
