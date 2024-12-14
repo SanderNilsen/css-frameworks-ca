@@ -1,5 +1,7 @@
 import {setAuthListener} from "../ui/listeners/auth.mjs"
 
-export async function homePage() {
+export async function login() {
     setAuthListener()
 }
+
+login()
