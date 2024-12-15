@@ -10,29 +10,34 @@ export function renderPosts(posts) {
   }
 
   postsContainer.innerHTML = posts
-    .map(
-      ({ id, title, body, created, updated, author }) => `
-      <div class="card mb-3" data-post-id="${id}">
-        <div class="card-header">
-          <span class="fw-bold">${author?.name || "Undefined"}</span>
-          <small class="text-muted ms-2">${new Date(created).toLocaleString()}</small>
-          <button class="btn btn-warning btn-sm edit-post"><i class="bi bi-pencil-square"></i></button>
-          <button class="btn btn-danger btn-sm delete-post"><i class="bi bi-trash-fill"></i></button>
+    .map(({ id, title, body, created, media, updated, author }) => {
+      const authorName = author?.name || "Anonymous"; 
+      const authorAvatar = author?.avatar?.url || "";
+
+      return `
+      <div class="card mb-3 shadow-sm" data-post-id="${id}">
+        <div class="card-header d-flex justify-content-between">
+          <span class="d-flex align-items-center">
+            ${authorAvatar? `<img src="${authorAvatar}" alt="${authorName}'s Avatar" class="avatar me-2">`: ""}
+            <strong>${authorName}</strong>
+            <small class="text-muted ms-2">${new Date(created).toLocaleString()}</small>
+          </span>
+          <span>
+            <button class="btn btn-warning btn-sm edit-post"><i class="bi bi-pencil-square"></i></button>
+            <button class="btn btn-danger btn-sm delete-post"><i class="bi bi-trash-fill"></i></button>
+          </span> 
         </div>
         <div class="card-body">
+          ${media?.url? `<img src="${media.url}" class="card-img-top mb-2" alt="${media.alt}" />`: ""}
           <h5 class="card-title">${title}</h5>
           <p class="card-text">${body}</p>
-          <div class="">
-              <button class="btn btn-sm btn-primary"><i class="bi bi-hand-thumbs-up-fill"></i> Like</button>
-              <button class="btn btn-sm btn-secondary"><i class="bi bi-chat-left-fill"></i> Comment</button>
-          </div>
         </div>
         <small class="card-footer text-muted">
           Last updated: ${new Date(updated).toLocaleString()}
         </small>
       </div>
-    `
-    )
+      `;
+    })
     .join("");
 
   // Event listeners for edit and delete buttons

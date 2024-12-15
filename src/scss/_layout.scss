@@ -17,13 +17,26 @@
     height: 100px;
   }  
   
-  body {
+  body, .card-header, .card-footer {
     background-color: #F7F8FC;
   }
 
   main {
     display: flex;
     justify-content: center;
+  }
+
+  .card-img-top {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1px;
+  }
+
+  .avatar{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
   }
 
   .card-login {
@@ -33,7 +46,7 @@
   }
 
   .card-feed {
-     width: 800px;
+     width: 700px;
   }
 
   button {
