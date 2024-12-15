@@ -32,6 +32,20 @@ export function displayMore(container, loadMoreButton) {
   }
 }
 
+/**
+ * Handles the creation of a new post.
+ *
+ * @async
+ * @function handleCreatePost
+ * @param {Event} event - The form submit event.
+ * @param {HTMLElement} loader - The loader element to display during the operation.
+ * @param {HTMLElement} postsContainer - The container where the posts are displayed.
+ * @param {HTMLElement} loadMoreButton - The button to load more posts after a new post is created.
+ * @param {HTMLFormElement} form - The form element containing post data.
+ * 
+ * @throws {Error} Will throw an error if the post creation fails.
+ */
+
 export async function handleCreatePost(event, loader, postsContainer, loadMoreButton, form) {
   event.preventDefault();
   const { value: title } = document.getElementById("postTitle");
