@@ -10731,6 +10731,10 @@ main {
   max-width: 400px;
 }
 
+.card-feed {
+  width: 800px;
+}
+
 button {
   border-radius: 50px;
 }
