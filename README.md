@@ -6,15 +6,16 @@ A simple social media application built using HTML, SASS, Bootstrap, and NPM. Th
 
 ## Features
 
-- **Authentication Page**: Allows users to log in or register using an HTML form with validation (without JavaScript).
-- **Feed Page**: Displays a list of user posts with options for searching, sorting, and creating new posts.
-- **Profile Page**: Shows a user's profile picture, stats (posts, followers, following), and allows users to follow/unfollow others.
+- **Authentication Page**: Allows users to log in or register using an HTML form with validation.
+- **Feed Page**: Displays a list of user posts with options for searching, and creating new posts.
+- **Profile Page**: Shows a user's profile picture, stats (posts, followers, following).
 - **Responsive Design**: Built with Bootstrap for a responsive and mobile-friendly layout.
 - **SASS Overrides**: Custom styles implemented using SASS for better maintainability and flexibility.
 
 ## Technologies Used
 
 - **HTML**: Structure of the application.
+- **Modular JavaScript**: Used to organize code into reusable and maintainable units by breaking it down into smaller modules.
 - **SASS**: Styles the application, with SASS used for custom styling and Bootstrap overrides.
 - **Bootstrap**: Provides prebuilt responsive design components.
 - **Node Package Manager**: Handles dependencies and build scripts.
