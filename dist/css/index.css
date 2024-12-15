@@ -10750,6 +10750,10 @@ button {
   border-radius: 50%;
 }
 
+.logo-header {
+  width: 75px;
+}
+
 .logo-footer,
 .profile-img-feed {
   width: 50px;
