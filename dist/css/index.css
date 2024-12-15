@@ -10763,14 +10763,15 @@ button {
   border-radius: 50%;
 }
 
+.logo-footer,
 .logo-header {
-  width: 75px;
+  width: 50px;
 }
 
-.logo-footer,
 .profile-img-feed {
   width: 50px;
   height: 50px;
+  border-radius: 50%;
 }
 
 .stats, .profile-name {

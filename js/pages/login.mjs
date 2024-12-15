@@ -1,4 +1,4 @@
-import {setAuthListener} from "../ui/listeners/auth.mjs"
+import {setAuthListener} from "../api/auth/auth.mjs"
 
 export async function login() {
     setAuthListener()
