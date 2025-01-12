@@ -64,8 +64,8 @@ export function handleSearch(event, postsContainer) {
   const query = event.target.value.trim().toLowerCase();
   const filteredPosts = query
     ? allPosts.filter(({ title, body }) =>
-        [title, body].some((text) => text.toLowerCase().includes(query))
-      )
+      [title, body].some((text) => text.toLowerCase().includes(query))
+    )
     : displayedPosts;
 
   renderPosts(filteredPosts, postsContainer);

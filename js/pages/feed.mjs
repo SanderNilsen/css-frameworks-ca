@@ -1,6 +1,6 @@
 import { fetchPosts, displayMore, handleCreatePost, handleSearch } from "../handlers/feedHandlers.mjs";
 
-document.addEventListener("DOMContentLoaded", () => {
+function initializeFeed() {
   const postsContainer = document.getElementById("posts-container");
   const createPostForm = document.getElementById("create-post-form");
   const searchInput = document.getElementById("search-input");
@@ -22,4 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
   loadMoreButton.addEventListener("click", () => {
     displayMore(postsContainer, loadMoreButton);
   });
-});
+}
+
+  initializeFeed();
