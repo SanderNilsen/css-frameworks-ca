@@ -17,177 +17,73 @@
   <body>
     <header class="bg-white p-4 sticky-top">
       <nav class="navbar d-flex justify-content-around">
-        <div class="profile-img-feed"></div>
+        <img src="/images/logo.png" alt="Profile" class="logo-header" />
         <h1 class="text-primary text-center">FEED</h1>
         <a href="/profile/">
-          <img src="/images/profile-img.png" alt="Profile" class="profile-img-feed"
+          <img
+            src="https://images.unsplash.com/photo-1579547945413-497e1b99dac0?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=80&h=400&w=400"
+            alt="Profile"
+            class="profile-img-feed"
         /></a>
       </nav>
     </header>
+
     <main>
-      <div class="container mt-4">
-        <div class="mt-5 bg-white p-3">
-          <h4>Create a new Post</h4>
-          <form>
-            <div class="mb-3">
-              <label for="postTitle" class="form-label">Title</label>
+      <div class="card card-feed mt-3">
+        <div class="card-body">
+          <div class="pb-3">
+            <h4>Create a new Post</h4>
+          </div>
+          <div>
+            <form id="create-post-form">
+              <div class="mb-3">
+                <label for="postTitle" class="form-label">Title</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="postTitle"
+                  placeholder="Post title"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="postContent" class="form-label">Description</label>
+                <textarea
+                  class="form-control"
+                  id="postContent"
+                  rows="3"
+                  placeholder="Write something..."
+                  required
+                ></textarea>
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Create post</button>
+              </div>
+            </form>
+            <div id="search-filter-container" class="my-4">
               <input
+                id="search-input"
                 type="text"
                 class="form-control"
-                id="postTitle"
-                required
-                placeholder="Post title"
+                placeholder="Search posts by title or content"
               />
             </div>
-            <div class="mb-3">
-              <label for="postContent" class="form-label">Description</label>
-              <textarea
-                class="form-control"
-                placeholder="Write something..."
-                id="postContent"
-                rows="3"
-                required
-              ></textarea>
-            </div>
-            <div class="mb-3">
-              <label for="postImage" class="form-label">Upload Image</label>
-              <input
-                class="form-control"
-                type="file"
-                id="postImage"
-                accept="image/*"
-                required
-              />
-            </div>
-            <div class="d-grid">
-              <button type="submit" class="btn btn-primary">Create post</button>
-            </div>
-          </form>
-        </div>
 
-        <div class="bg-white p-3 mt-4">
-          <h3 class="mb-4 mt-3">Posts</h3>
-          <div class="row">
-            <div class="mb-3">
-              <form>
-                <input
-                  class="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-              </form>
-            </div>
-
-            <div class="mb-4">
-              <select class="form-select" id="sort">
-                <option selected>Newest</option>
-                <option>Oldest</option>
-                <option>Most Popular</option>
-              </select>
+            <div id="posts-container">
+              <div id="loader" class="text-center my-3" style="display: none">
+                <div class="spinner-border text-primary" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="row g-4">
-            <div class="col-6 card-center">
-              <div class="card">
-                <img
-                  src="../images/skyscrapers-unsplash.jpg"
-                  class="card-img-top"
-                  alt="Post Thumbnail"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Post Title</h5>
-                  <p class="card-text">Description...</p>
-                  <div class="row g-2">
-                    <a href="#" class="btn btn-sm btn-primary"
-                      ><i class="bi bi-hand-thumbs-up-fill"></i> Like</a
-                    >
-                    <a href="#" class="btn btn-sm btn-secondary"
-                      ><i class="bi bi-chat-left-fill"></i> Comment</a
-                    >
-                    <a href="#" class="btn btn-sm btn-success"
-                      ><i class="bi bi-share-fill"></i> Share</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-6 card-center">
-              <div class="card">
-                <img
-                  src="../images/skyscrapers-2-unsplash.png"
-                  class="card-img-top"
-                  alt="Post Thumbnail"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Post Title</h5>
-                  <p class="card-text">Description...</p>
-                  <div class="row g-2">
-                    <a href="#" class="btn btn-sm btn-primary"
-                      ><i class="bi bi-hand-thumbs-up-fill"></i> Like</a
-                    >
-                    <a href="#" class="btn btn-sm btn-secondary"
-                      ><i class="bi bi-chat-left-fill"></i> Comment</a
-                    >
-                    <a href="#" class="btn btn-sm btn-success"
-                      ><i class="bi bi-share-fill"></i> Share</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-6 card-center">
-              <div class="card">
-                <img
-                  src="../images/skyscrapers-3-unsplash.png"
-                  class="card-img-top"
-                  alt="Post Thumbnail"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Post Title</h5>
-                  <p class="card-text">Description...</p>
-                  <div class="row g-2">
-                    <a href="#" class="btn btn-sm btn-primary"
-                      ><i class="bi bi-hand-thumbs-up-fill"></i> Like</a
-                    >
-                    <a href="#" class="btn btn-sm btn-secondary"
-                      ><i class="bi bi-chat-left-fill"></i> Comment</a
-                    >
-                    <a href="#" class="btn btn-sm btn-success"
-                      ><i class="bi bi-share-fill"></i> Share</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-6 card-center">
-              <div class="card">
-                <img
-                  src="../images/skyscrapers-4-unsplash.png"
-                  class="card-img-top"
-                  alt="Post Thumbnail"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Post Title</h5>
-                  <p class="card-text">Description...</p>
-                  <div class="row g-2">
-                    <a href="#" class="btn btn-sm btn-primary"
-                      ><i class="bi bi-hand-thumbs-up-fill"></i> Like</a
-                    >
-                    <a href="#" class="btn btn-sm btn-secondary"
-                      ><i class="bi bi-chat-left-fill"></i> Comment</a
-                    >
-                    <a href="#" class="btn btn-sm btn-success"
-                      ><i class="bi bi-share-fill"></i> Share</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="text-center mt-4">
+            <button id="load-more" class="btn btn-primary">Load more posts</button>
           </div>
         </div>
       </div>
     </main>
+
     <footer class="bg-primary text-center text-white mt-4">
       <img class="logo-footer" src="/images/logo-footer.png" alt="Footer logo" />
       <div class="text-center pb-4">
@@ -195,5 +91,6 @@
         <a class="text-white" href="https://sandernilsen.github.io/">Sander Nilsen</a>
       </div>
     </footer>
+    <script type="module" src="/js/pages/feed.mjs"></script>
   </body>
 </html>

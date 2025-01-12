@@ -9,11 +9,46 @@
         color: map-get($colors, danger);        
       }
   }
+
+  #loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }  
   
-  body {
+  body, .card-header, .card-footer {
     background-color: #F7F8FC;
   }
-  
+
+  main {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card-img-top {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1px;
+  }
+
+  .avatar{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+  }
+
+  .card-login {
+    border-radius: 2px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+  }
+
+  .card-feed {
+     width: 700px;
+  }
+
   button {
     border-radius: 50px;
   }
@@ -22,23 +57,22 @@
     color:white;
   }
   
-  .card {
-    border-radius: 2px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-  }
-  
   .profile-img {
     width: 150px;
     height: 150px;
     object-fit: cover;
     border-radius: 50%;
   }
-  
-  .logo-footer, 
+
+  .logo-footer,
+  .logo-header {
+    width: 50px;
+  }
+
   .profile-img-feed {
     width: 50px;
     height: 50px;
+    border-radius: 50%;
   }
   
   .stats, .profile-name {
